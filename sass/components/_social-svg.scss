@@ -1,0 +1,19 @@
+.social-svg {
+  @include flex;
+  padding: 30px;
+  list-style: none;
+  gap: 25px;
+
+  &__item {
+    height: 40px;
+    width: 40px;
+    @include flex;
+    border-radius: 50%;
+    fill: #fea5bb;
+  }
+
+  &__item:hover {
+    color: #fea5bb;
+    fill: #d41443;
+  }
+}
