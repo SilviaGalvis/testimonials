@@ -67,7 +67,7 @@
 
 // Media query 768 tablets----------------------------
 
-@include screen-768 {
+@media (max-width: 768px) {
   .testimonials {
     width: 768px;
     flex-wrap: wrap;
@@ -96,7 +96,7 @@
 
 // Media query 320 mobile----------------------------
 
-@include screen-320 {
+@media (max-width: 320px) {
   .testimonials {
     width: 320px;
     margin: 0 auto;
