@@ -7,7 +7,7 @@
     justify-content: center;
   }
 
-  .testimonials-paragraph__group {
+  &-paragraph__group {
     display: flex;
     justify-content: center;
   }
@@ -65,56 +65,86 @@
   }
 }
 
-// Media query 768----------------------------
+// Media query 768 tablets----------------------------
 
 @include screen-768 {
-  .body {
-    background-color: #c7133e;
-  }
-
   .testimonials {
     width: 768px;
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-  }
-  .testimonials-group {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .testimonials-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    &-group {
+      display: flexbox;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      padding-top: 50px;
+    }
 
-  .testimonials-paragraph__group {
-    display: block;
-    justify-content: end;
-    width: 420px;
-    height: 164px;
-  }
-  .testimonials-paragraph {
-    font-size: 14px;
-    width: 492px;
-    height: 83px;
-  }
-  .testimonials-name {
-    font-size: 16px;
-    width: 492px;
-    height: 83px;
-    font-weight: 400;
-  }
-  .testimonials-icon {
-    width: 44px;
-    height: 30px;
-  }
+    &-name {
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
 
-  .testimonials-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &-paragraph {
+      font-size: 14px;
+      width: 492px;
+    }
+  }
+}
+
+// Media query 320 mobile----------------------------
+
+@include screen-320 {
+  .testimonials {
+    width: 320px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-img {
+      margin: unset;
+      display: unset;
+      position: absolute;
+      margin: 50px;
+    }
+
+    &-name {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 15px;
+      gap: unset;
+    }
+
+    &-paragraph__group {
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 200px;
+    }
+
+    &-paragraph {
+      font-size: 12px;
+      width: 157px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      height: unset;
+    }
+
+    &-icon {
+      position: absolute;
+      margin-right: 100px;
+      margin-top: -20px;
+    }
+
+    &-group {
+      display: flexbox;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      padding-top: 400px;
+      width: 172px;
+    }
   }
 }
